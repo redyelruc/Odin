@@ -1,1 +1,3 @@
-This is the project file for The Odin Project.
+The Odin Project.
+
+Learning HTML, CSS, and Javascript from the beginning.
