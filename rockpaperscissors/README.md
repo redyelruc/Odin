@@ -21,7 +21,7 @@ I'm always looking for collaborations and particularly welcome from developers l
 
 ## Submitting changes
 
-Please send a pull request with a clear list of what you've done (read more about [pull requests](http://help.github.com/pull-requests/)). When you send a pull request, please make sure that there is only one feature added/changed per commit. Please attach a clear log message for your commits. One-line messages are fine for small changes, but bigger changes should look like this:
+Please send a pull request with a clear list of what you've done (read more about [pull requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)). When you send a pull request, please make sure that there is only one feature added/changed per commit. Please attach a clear log message for your commits. One-line messages are fine for small changes, but bigger changes should look like this:
 
 ```
 $ git commit -m "A brief summary of the commit
