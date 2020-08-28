@@ -3,7 +3,6 @@
     <head>
         <title>Etch-a-Sketch</title>
         <link rel="stylesheet" href="etchasketch.css">
-        <script src="etchasketch.js"></script> 
     </head>
     <body>
         <center>
@@ -14,15 +13,19 @@
         <div id="instructions">
             Instructions
         </div>
-        <div id="control-panel">
-            Controls
-        </div>
         <center>
-        <div id="sketchpad" class="centered">
-            Sketchpad
+        <div id="control-panel">
+            <div id="controls">
+                Controls
+                <button id="erase-toggle" type ="submit" onclick=toggleEraseMode()>Erase</button>
+                Choose colour:<input type="color" id="color" value="#00ff00" onchange=setColor()>
+            </div>
+            <div id="sketchpad" class="centered">
+            
+            </div>
         </div>
         </center>
     </body>
-
+    <script src="etchasketch.js"></script> 
 </html>
 
