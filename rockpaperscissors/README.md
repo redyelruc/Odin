@@ -12,21 +12,12 @@ Rock, Paper, Scissors game using vanilla Javascript, HTML, and CSS.
 
 Aidan Curley as part of The Odin Project.
 
-## **Changelog**
-
-A detailed changelog, intended for programmers
-
-
-## **Bugs**
-
-Currently no known bugs.
 
 ## **Contributing**
 
 **How to contribute**
 
-I'm always looking for collaborations and particularly welcome from developers looking to improve the existing code, or add new features to the application.
-
+I'm always looking for collaborations and particularly welcome from developers looking to improve the existing code or add new features
 
 ## Submitting changes
 
@@ -37,6 +28,15 @@ $ git commit -m "A brief summary of the commit
 > 
 > A paragraph describing what changed and its impact."
 ```
+
+## **Changelog**
+
+A detailed changelog, intended for programmers
+
+## **Bugs**
+
+Currently no known bugs.
+
 
 ## Thanks
 
