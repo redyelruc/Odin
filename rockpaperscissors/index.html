@@ -6,26 +6,31 @@
         <script src="rockpaperscissors.js"></script> 
     </head>
     <body>
+        <center>
         <h1>
           ROCK, PAPER, SCISSORS
         </h1>
-        <div id="start-match">
+        <div id="start-match" class="margins">
             <button id="start" class="btn-hover" type="submit" onclick = startMatch()>Start New Match</button>
         </div>
         <div id="scoreboard">
-            not started
+            
         </div>
-        <div id="computer-selection">
-            computer selection
+        <div id="computer-selection" class= "selections margins display">
+            
         </div>
-        <div id="display" class="content">
-            This is where the results of each game will go.
+        <div id="player-selection" class="selections display">
+            
+        </div>
+        <div id="result" class="content margins display">
+            
         </div>
         <div id="buttons-div">
             <button id="rock" class= "choice btn-hover" type="submit" onclick = startGame(this.id)>Rock</button>
             <button id="paper" class= "choice btn-hover" type="submit" onclick = startGame(this.id)>Paper</button>
             <button id="scissors" class= "choice btn-hover" type="submit" onclick = startGame(this.id)>Scissors</button>
         </div>
+        </center>
       </body>
 
 </html>

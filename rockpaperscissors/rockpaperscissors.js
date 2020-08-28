@@ -7,18 +7,28 @@ let playerSelection = "";
 function startMatch(){
     playerScore = 0;
     computerScore = 0;
+    resetDisplay();
     refreshScore(0);
 }
 
 
 function startGame(playerChoice){
-    playerSelection = playerChoice;
+    playerSelection = playerChoice.toUpperCase();
+    let display = document.getElementById("player-selection");
+    display.innerHTML = "You chose:  " + playerSelection;
     computerSelection = computerPlay();
     result = getWinner(playerSelection, computerSelection);
     displayResult(result);
     refreshScore(result);
 }
 
+
+function resetDisplay(){
+    let displays = document.getElementsByClassName("display");
+    for (let i = 0; i < displays.length; i++){
+        displays[i].innerHTML = "";
+    }
+}
 function refreshScore(resultIn){
     if (resultIn === 1){
         playerScore += 1;
@@ -26,13 +36,16 @@ function refreshScore(resultIn){
         computerScore +=1 ;
     }
     let board = document.getElementById("scoreboard");
+    if (playerScore > computerScore){
+        board.style.color = "green";
+    } else if (playerScore === computerScore){
+        board.style.color = "black";
+    } else{
+        board.style.color = "red";
+    }
     board.innerHTML = playerScore + " - " + computerScore;
 }
 
-function playerPlay(selected){
-    playerSelection = selected.toUpperCase();
-    return;
-}
 
 function computerPlay(){
     let choice = choices[Math.floor(Math.random() * choices.length)];
@@ -74,7 +87,7 @@ function getWinner(playerSelection, computerSelection){
 }
 
 function displayResult(result){
-    let resultsBox = document.getElementById("display");
+    let resultsBox = document.getElementById("result");
     let message = result;
     switch (result){
         case 1:
