@@ -16,11 +16,11 @@ button{
 
 #control-panel{
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 #sketchpad{
-    width: 320px;
+    width: 350px;
     height: 320px;
     border: 2px solid black;
     margin: 10px;

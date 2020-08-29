@@ -2,6 +2,7 @@
 let paintable = false;
 let eraseMode = false;
 let defaultColor = "#009900";
+let gridSize = 16;
 let fillColor;
 
 
@@ -12,19 +13,22 @@ function startup() {
     colorWell.value = defaultColor;
     fillColor = defaultColor;
     colorWell.addEventListener("change", () => {
-        fillColor = event.target.value}, false);
+    fillColor = event.target.value}, false);
     colorWell.select();
-    makeGrid(16);
+
+    let gridSizeControl = document.querySelector("#gridsize");
+    gridSizeControl.value = gridSize;
+    gridSizeControl.addEventListener("change", () => {
+        gridSize = event.target.value;
+        deleteGrid();
+        makeGrid(gridSize)
+        }, false);
+
+    makeGrid(gridSize);
   }
 
 
-function setColor(){
-    let input = document.getElementById("color");
-    fillColor = input.getAttribute('value');
-}
-
-
-  function makeGrid(size) {
+function makeGrid(size) {
     let sketchpad = document.getElementById("sketchpad");
     sketchpad.style.setProperty('--grid-rows', size);
     sketchpad.style.setProperty('--grid-cols', size);
@@ -40,6 +44,14 @@ function setColor(){
 }
 
 
+function deleteGrid(){
+    let sketchpad = document.getElementById("sketchpad");
+    while (sketchpad.firstChild) {
+        sketchpad.removeChild(sketchpad.lastChild);
+    }     
+}
+
+
 function paintCell(cell){
     if (eraseMode){
         cell.style['background-color'] = "white";
@@ -47,6 +59,21 @@ function paintCell(cell){
         cell.style['background-color'] = fillColor;
     }   
 }
+
+
+function enforceMinMax(el){
+    if(el.value != ""){
+      if(parseInt(el.value) < parseInt(el.min)){
+        el.value = el.min;
+        el.click();
+      }
+      if(parseInt(el.value) > parseInt(el.max)){
+        el.value = el.max;
+        el.click();
+      }
+    }
+    
+  }
 
 
 function toggleEraseMode(){
