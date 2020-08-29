@@ -21,7 +21,8 @@ function startup() {
     gridSizeControl.addEventListener("change", () => {
         gridSize = event.target.value;
         deleteGrid();
-        makeGrid(gridSize)
+        makeGrid(gridSize);
+        toggleGridlines(document.querySelector("#gridline-visibility"));
         }, false);
 
     makeGrid(gridSize);
@@ -51,6 +52,17 @@ function deleteGrid(){
     }     
 }
 
+
+function toggleGridlines(element){
+    let cells = document.getElementsByClassName("grid-item");
+    for (let i = 0; i < cells.length; i++){
+        if (element.checked){
+            cells[i].style.border = "1px solid silver";
+        }else{
+            cells[i].style.border = "none";
+        }
+    }
+}
 
 function paintCell(cell){
     if (eraseMode){
