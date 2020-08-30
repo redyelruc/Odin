@@ -1,25 +1,31 @@
-function add () {
-	
+function add (a,b) {
+	return a + b;
 }
 
-function subtract () {
-	
+function subtract (a,b) {
+	return a - b;
 }
 
-function sum () {
-	
+function sum (numbers) {
+	let sum = numbers.reduce(function(a, b){
+		return a + b;}, 0);
+	return sum;
 }
 
-function multiply () {
-	
+function multiply (numbers) {
+	return numbers.reduce((a, b) => a * b);
 }
 
-function power() {
-	
+function power(a,b) {
+	return a ** b;
 }
 
-function factorial() {
-	
+function factorial(a) {
+	if (a ===0 || a === 1){
+		return 1;
+	} else{
+	return a * factorial(a-1);
+	}
 }
 
 module.exports = {

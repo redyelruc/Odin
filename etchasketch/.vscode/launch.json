@@ -9,14 +9,16 @@
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "file": "${workspaceFolder}/index.html"
+            "file": "${workspaceFolder}/etchasketch.html",
+
+            
         },
         {
             "name": "Launch localhost",
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "url": "http://localhost/index.html",
+            "url": "http://localhost/etchasketch.html",
             "webRoot": "${workspaceFolder}"
         },
         {
@@ -29,7 +31,8 @@
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "addonPath": "${workspaceFolder}"
+            "addonPath": "${workspaceFolder}",
+
         }
     ]
 }
