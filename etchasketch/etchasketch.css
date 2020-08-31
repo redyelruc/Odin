@@ -93,6 +93,7 @@ button:hover{
 
 #git{
     width: 20%;
+    padding: 2px;
     position: absolute; 
     right: 0; 
     bottom: 0;
