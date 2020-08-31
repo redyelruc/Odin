@@ -1,0 +1,44 @@
+div{
+    border: 1px solid black;
+    height: 30px;
+    width: auto;
+    margin: 1px;
+}
+
+#calculator-shell{
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+#display{
+    flex: 2.5;
+    background-color: white;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    background-color: black;
+    flex: 1;
+
+
+}
+
+.btn-container > div{
+    flex: 1;
+    border: none;
+    display:flex;
+    margin: 2px;
+}
+
+button{
+    flex: 1;
+    padding: 2px;
+}
